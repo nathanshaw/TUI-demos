@@ -67,8 +67,13 @@ void updateSound()
   float freq = constrain( map( values[1], 0, 100, 200, 10000 ), 200, 10000 );
   float rez  = constrain( map( values[2], 100, 0, 2, 0.005 ), 0.005, 1 );
   
+  if (values[1] > 90 && values[2] > 90) {
+    moog.frequency.setLastValue(0.1);
+    moog.resonance.setLastValue(0.0);
+  } else{
   moog.frequency.setLastValue( freq );
-  moog.resonance.setLastValue( rez  );
+  moog.resonance.setLastValue( rez  );  
+  }
 }
 
 void keyPressed()
