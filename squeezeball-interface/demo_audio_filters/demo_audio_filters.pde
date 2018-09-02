@@ -15,6 +15,7 @@ int isPlaying = 0;
 Minim minim;
 AudioOutput output;
 FilePlayer  groove;
+FilePlayer groove2;
 LowPassSP lpf;
 HighPassSP hpf;
 
@@ -106,11 +107,4 @@ void draw()
     }
   }
   readArduino();
-}
-
-void mouseMoved()
-{
-  // map the mouse position to the range [20, 1000], an arbitrary range of cutoff frequencies
-  float cutoff = map(mouseX, 0, width, 20, 1000);
-  lpf.setFreq(cutoff);
 }

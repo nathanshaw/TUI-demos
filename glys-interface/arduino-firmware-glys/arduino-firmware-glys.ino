@@ -144,5 +144,5 @@ void loop(void)
       Serial.print(255);
       Serial.println();
   }
-  colorWipe(strip.Color(int(constrain(map(pitch, -180, 180, 0, 255),0,255)), 0, constrain(map(roll, -90, 90, 0, 255), 0, 255)), 0);
+  colorWipe(strip.Color(int(constrain(map(pitch, -60, 120, 0, 155),0,255)), constrain(map(roll, -70, 70, 0, 55), 0, 255), constrain(map(roll, -70, 70, 0, 155), 0, 255)), 0);
 }
