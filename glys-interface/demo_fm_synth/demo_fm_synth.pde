@@ -123,10 +123,11 @@ void draw()
   text( "Modulation amplitude: " + fm.amplitude.getLastValue(), 5, 30 );
 }
 
+
 void updateModAndFreq() {
 
-  float modulateAmountTarget = map( values[1], -90, 90, 220, 1 );
-  float modulateFrequencyTarget = map( values[2], -90, 90, 0.1, 100 );
+  float modulateAmountTarget = map( values[1], -90, 90, 420, 1 );
+  float modulateFrequencyTarget = map( values[2], -90, 90, 0.1, 1000 );
   if (modulateFrequencyTarget > modF) {
     modF = modF * 1.01;
   } else if (modulateAmountTarget < modF) {
